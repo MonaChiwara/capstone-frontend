@@ -1,5 +1,5 @@
+import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import './App.css';
 
 // Components
 import Nav from '../../components/Nav/Nav';
@@ -9,15 +9,40 @@ import Footer from '../../components/Footer/Footer';
 import Home from '../Home/Home';
 import Login from '../Login/Login';
 import SignUp from '../SignUp/SignUp'
-function App() {
+import Blogs from '../Blogs/Blogs'
+
+// Services
+import * as usersService from '../../utilities/users-service'
+// CSS
+import './App.css';
+
+const App = () => {
+  const [user, setUser] = useState('')
+
+  useEffect(() => {
+    if (usersService.getToken()) setUser(usersService.getUser())
+  }, [])
+
   return (
     <div className="App">
-      <Nav />
+      <Nav user={user} setUser={setUser} logOut={usersService.logOut} />
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<SignUp />} />
+        <Route path='/login' element={<Login setUser={setUser}/>} />
+        <Route path='/signup' element={<SignUp setUser={setUser}/>} />
+
+        {
+          user &&
+          <>
+            <Route path='/blogs' element={<Blogs />} />
+            {/* <Route path='/blogs/create' element={<CreateBlog />} />
+            <Route path='/blogs/:id' element={<BlogDetails />} />
+            <Route path='/blogs/:id/edit' element={<UpdateBlogForm />} /> */}
+          </>
+        }
+        
+        
       </Routes>
 
       <Footer />

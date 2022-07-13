@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = 'http://localhost:8070/api/v1/users'
+const BASE_URL = 'https://en-route.onrender.com/api/v1/users'
 
 const setOptions = () => {
     return {headers: {

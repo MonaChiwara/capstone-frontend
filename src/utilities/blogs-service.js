@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { getToken } from './users-service'
 
-const BASE_URL = 'http://localhost:8070/api/v1/blogs'
+const BASE_URL = 'https://enroute.onrender.com/api/v1/blogs'
 
 
 const setOptions = () => {

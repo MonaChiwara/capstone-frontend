@@ -55,7 +55,7 @@ const Home = () => {
 
                     <div className="mb-2">
                         <label htmlFor="exampleInputName" className="form-label"> Full Name</label>
-                        <input type="password" className="form-control" />
+                        <input type="password" className="form-control" placeholder='Name' />
                     </div>
                     <div className="mb-2">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>

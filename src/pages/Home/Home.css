@@ -1,0 +1,42 @@
+.body{
+    margin: 30px 20px;
+    text-align: center;
+}
+
+img{
+    height: 500px;
+    width: 100%;
+}
+
+#divOne{
+  justify-items: center;
+}
+
+h1{
+    font-family: 'The Nautigal', cursive;
+    font-size: 200px;
+   margin: 0% 20px;
+}
+
+h2{
+    font-family: 'Old Standard TT', serif;
+    font-size: 50px;
+}
+
+#card{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5% 15%;
+    text-align: center;
+}
+
+.cardHome{
+    width: 18rem;
+    margin: 1%;
+    height: 30rem;
+}
+
+.form{
+    margin: 0% 32%;
+   width: 500px;
+}

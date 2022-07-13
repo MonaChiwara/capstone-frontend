@@ -1,0 +1,10 @@
+#icon{
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.icons{
+    justify-content: space-between;
+}

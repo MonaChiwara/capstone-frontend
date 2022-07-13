@@ -15,18 +15,15 @@ const Login = ({ setUser }) => {
     }
 
     const handleSubmit = async e => {
-
         e.preventDefault()
         try {
             const user = await login(credentials)
-           
             console.log(user)
             if(user) {
                 setUser(user)
-                
-                navigate('/blogs')
+                navigate('/')
             } else {
-                throw new Error       
+                throw new Error  ()     
             }
         } catch(e) {
             setMessage('Log in Failed - Try Again')

@@ -76,7 +76,7 @@ const SignUp = ({ setUser }) => {
                                                     <label className="form-label" htmlFor="form3Example1n">Last name</label>
                                                 </div>
                                             </div>
-                                            <div className="col-md-6 mb-4">
+                                            <div className="mb-4">
                                                 <div className="form-outline">
                                                     <input
                                                         type="text"
